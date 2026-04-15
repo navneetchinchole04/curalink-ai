@@ -67,8 +67,9 @@ cd curalink-ai
 
 ### AI Summary Output
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/76bdbe77-240d-4675-a250-3198355c03a5" width="90%" />
+  <img src="https://github.com/user-attachments/assets/f7879bc2-95ca-471e-8b0a-bcd3a686d77c" width="90%" />
 </p>
+
 
 ---
 
