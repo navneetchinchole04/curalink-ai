@@ -60,10 +60,12 @@ cd curalink-ai
 
 ## 🎥 Demo
 
+### Home / Chat UI
 <p align="center">
   <img src="https://github.com/user-attachments/assets/72ad4c86-978e-4813-85b7-b6a9137de497" width="90%" />
 </p>
 
+### AI Summary Output
 <p align="center">
   <img src="https://github.com/user-attachments/assets/76bdbe77-240d-4675-a250-3198355c03a5" width="90%" />
 </p>
