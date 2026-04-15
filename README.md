@@ -27,7 +27,9 @@ cd curalink-ai
 2. Backend
 
 cd backend
+
 npm install
+
 node server.js
 
 ---
@@ -41,7 +43,9 @@ ollama run phi
 4. Frontend
 
 cd frontend
+
 npm install
+
 npm start
 
 ---
@@ -57,7 +61,9 @@ lung cancer treatment
 Get:
 
 AI summary
+
 Latest research papers
+
 ⚠️ Note
 
 .env file is not included for security.
@@ -71,5 +77,7 @@ Latest research papers
 B.Tech Electronics & Computer Engineering  
 
 📧 Email: navneetchinchole04@gmail.com
+
 🔗 GitHub: https://github.com/navneetchinchole04  
+
 🔗 LinkedIn: https://www.linkedin.com/in/navneet-chinchole-b28b5b259/
