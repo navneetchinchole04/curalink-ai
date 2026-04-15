@@ -26,35 +26,35 @@ cd curalink-ai
 
 2. Backend
 
-cd backend
+   cd backend
 
-npm install
+   npm install
 
-node server.js
+   node server.js
 
 ---
 
 3. Run LLM
 
-ollama run phi
+   ollama run phi
 
 ---
 
 4. Frontend
 
-cd frontend
+   cd frontend
 
-npm install
+   npm install
 
-npm start
+   npm start
 
 ---
 
 📌 Example
 
-Search:
+   Search:
 
-lung cancer treatment
+   lung cancer treatment
 
 ---
 
