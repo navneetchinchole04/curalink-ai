@@ -9,16 +9,22 @@ exports.search = async (req, res) => {
 
     const data = await getAllData(finalQuery);
 
-    const summary = "AI summary not available on cloud. Showing research papers only.";
+    // ✅ SAFE fallback
+    const papers = data?.openalex?.slice(0, 2) || [];
 
     res.json({
-      summary,
-      papers: data.openalex.slice(0, 2),
+      summary: "AI summary not available on cloud. Showing research papers only.",
+      papers,
       trials: []
     });
 
   } catch (error) {
     console.log("ERROR:", error.message);
-    res.status(500).json({ error: "Something went wrong" });
+
+    // ✅ RETURN SAFE RESPONSE INSTEAD OF 500
+    res.json({
+      summary: "Unable to fetch data right now. Try again later.",
+      papers: []
+    });
   }
 };
