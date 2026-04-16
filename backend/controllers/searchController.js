@@ -9,7 +9,7 @@ exports.search = async (req, res) => {
 
     const data = await getAllData(finalQuery);
 
-    const summary = await generateSummary(data);
+    const summary = "AI summary not available on cloud. Showing research papers only.";
 
     res.json({
       summary,
