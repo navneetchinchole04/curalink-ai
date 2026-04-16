@@ -21,11 +21,8 @@ function App() {
 
     try {
       const res = await axios.post(
-        "https://curalink-ai-z514.onrender.com/api/search", // ✅ your backend
-        {
-          disease,
-          query
-        }
+        "https://curalink-ai-z514.onrender.com/api/search",
+        { disease, query }
       );
 
       const botMessage = {
@@ -35,16 +32,17 @@ function App() {
       };
 
       setMessages(prev => [...prev, botMessage]);
+
     } catch (err) {
-  setMessages(prev => [
-    ...prev,
-    {
-      type: "bot",
-      summary: "Backend error. Please try again.",
-      papers: []
+      setMessages(prev => [
+        ...prev,
+        {
+          type: "bot",
+          summary: "Backend error. Please try again.",
+          papers: []
+        }
+      ]);
     }
-  ]);
-}
 
     setLoading(false);
     setDisease("");
@@ -54,12 +52,10 @@ function App() {
   return (
     <div className="chat-app">
 
-      {/* HEADER */}
       <div className="header">
         <h1>🧠 CuraLink AI</h1>
       </div>
 
-      {/* CHAT */}
       <div className="chat-box">
 
         {messages.length === 0 && (
@@ -97,7 +93,6 @@ function App() {
         {loading && <p className="loading">Thinking...</p>}
       </div>
 
-      {/* INPUT */}
       <div className="input-area">
         <input
           type="text"
