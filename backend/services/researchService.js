@@ -24,17 +24,29 @@ function rankPapers(papers) {
 
 // 🔹 Combine all
 async function getAllData(query) {
-  const [openalex, pubmed] = await Promise.all([
-    fetchOpenAlex(query),
-    fetchPubMed(query)
-  ]);
+  let openalex = [];
+  let pubmed = {};
+
+  try {
+    openalex = await fetchOpenAlex(query);
+  } catch (err) {
+    console.log("OpenAlex Error:", err.message);
+    openalex = [];
+  }
+
+  try {
+    pubmed = await fetchPubMed(query);
+  } catch (err) {
+    console.log("PubMed Error:", err.message);
+    pubmed = {};
+  }
 
   const ranked = rankPapers(openalex);
 
   return {
     openalex: ranked,
     pubmed,
-    trials: [] // skipped for stability
+    trials: []
   };
 }
 
