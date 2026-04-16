@@ -36,15 +36,15 @@ function App() {
 
       setMessages(prev => [...prev, botMessage]);
     } catch (err) {
-      setMessages(prev => [
-        ...prev,
-        {
-          type: "bot",
-          summary: "⚠️ Server error or LLM not available on cloud",
-          papers: []
-        }
-      ]);
+  setMessages(prev => [
+    ...prev,
+    {
+      type: "bot",
+      summary: "Backend error. Please try again.",
+      papers: []
     }
+  ]);
+}
 
     setLoading(false);
     setDisease("");
